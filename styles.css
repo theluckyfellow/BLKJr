@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+:root {
+  --color-primary: #313;
+  --color-secondary: #313;
+  --color-accent: #313;
+}
+  canvas {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #313;
+  background-color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+nav {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+section#projects {
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .project {
+    border-top: 4px solid #313;
+    margin-bottom: 1rem;
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0.5rem;
+
+    }
+
+    a {
+      color: var(--color-secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+  .major {
+    border-top: 36px solid #313;
+    margin-bottom: 1rem;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0.5rem;
+    }
+
+    a {
+      color: var(--color-secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+  .mid {
+    border-top: 12px solid #313;
+    margin-bottom: 1rem;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0.5rem;
+    }
+
+    a {
+      color: var(--color-secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+  
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+  img {
+  width: auto;
+  height: 400px;
+  object-fit: scale-down;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  min-width: 100px;
+  max-width: 310px;
+}

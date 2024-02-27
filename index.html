@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian K</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <script>
+      let vect = [];
+      let arr = [[0,1,2,3,4],[0,1,2,4,3],[0,1,3,2,4],[0,1,3,4,2],[0,1,4,2,3],[0,1,4,3,2],[0,2,1,3,4],[0,2,1,4,3],[0,2,3,1,4],[0,2,3,4,1],[0,2,4,1,3],[0,2,4,3,1],[0,3,1,2,4],[0,3,1,4,2],[0,3,2,1,4],[0,3,2,4,1],[0,3,4,1,2],[0,3,4,2,1],[0,4,1,2,3],[0,4,1,3,2],[0,4,2,1,3],[0,4,2,3,1],[0,4,3,1,2],[0,4,3,2,1],[1,0,2,3,4],[1,0,2,4,3],[1,0,3,2,4],[1,0,3,4,2],[1,0,4,2,3],[1,0,4,3,2],[1,2,0,3,4],[1,2,0,4,3],[1,2,3,0,4],[1,2,3,4,0],[1,2,4,0,3],[1,2,4,3,0],[1,3,0,2,4],[1,3,0,4,2],[1,3,2,0,4],[1,3,2,4,0],[1,3,4,0,2],[1,3,4,2,0],[1,4,0,2,3],[1,4,0,3,2],[1,4,2,0,3],[1,4,2,3,0],[1,4,3,0,2],[1,4,3,2,0],[2,0,1,3,4],[2,0,1,4,3],[2,0,3,1,4],[2,0,3,4,1],[2,0,4,1,3],[2,0,4,3,1],[2,1,0,3,4],[2,1,0,4,3],[2,1,3,0,4],[2,1,3,4,0],[2,1,4,0,3],[2,1,4,3,0],[2,3,0,1,4],[2,3,0,4,1],[2,3,1,0,4],[2,3,1,4,0],[2,3,4,0,1],[2,3,4,1,0],[2,4,0,1,3],[2,4,0,3,1],[2,4,1,0,3],[2,4,1,3,0],[2,4,3,0,1],[2,4,3,1,0],[3,0,1,2,4],[3,0,1,4,2],[3,0,2,1,4],[3,0,2,4,1],[3,0,4,1,2],[3,0,4,2,1],[3,1,0,2,4],[3,1,0,4,2],[3,1,2,0,4],[3,1,2,4,0],[3,1,4,0,2],[3,1,4,2,0],[3,2,0,1,4],[3,2,0,4,1],[3,2,1,0,4],[3,2,1,4,0],[3,2,4,0,1],[3,2,4,1,0],[3,4,0,1,2],[3,4,0,2,1],[3,4,1,0,2],[3,4,1,2,0],[3,4,2,0,1],[3,4,2,1,0],[4,0,1,2,3],[4,0,1,3,2],[4,0,2,1,3],[4,0,2,3,1],[4,0,3,1,2],[4,0,3,2,1],[4,1,0,2,3],[4,1,0,3,2],[4,1,2,0,3],[4,1,2,3,0],[4,1,3,0,2],[4,1,3,2,0],[4,2,0,1,3],[4,2,0,3,1],[4,2,1,0,3],[4,2,1,3,0],[4,2,3,0,1],[4,2,3,1,0],[4,3,0,1,2],[4,3,0,2,1],[4,3,1,0,2],[4,3,1,2,0],[4,3,2,0,1],[4,3,2,1,0]];
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        
+        colorMode(HSB, 360,100,255,255);
+        strokeWeight(2);
+        frameRate(15);
+      }
+
+      function draw() {
+        fill(255,7);
+        noStroke();
+        rect(0,0,width,height);
+        vect.push(createVector(mouseX-pmouseX,mouseY-pmouseY));
+        stroke(random(0,360),0,196,7);
+        strokeWeight(2);
+        if(vect.length > 4 )
+        {
+
+          let x;
+          let y;
+
+            for(let i = arr.length-1; i >-1; i--)
+            {
+              if(frameCount%5===0)
+              {
+                stroke(0,0,50);
+                strokeWeight(3);
+              }
+              x = mouseX;
+              y = mouseY;
+              for(let ii = 0; ii < vect.length; ii++)
+              {
+                x -= vect[ii].x;
+                y -= vect[ii].y;
+              }
+              for(let ii = 0; ii<arr[i].length;ii++)
+              {
+                if(frameCount%5===0&&i!=0)
+                {
+                  stroke(random(0,360),80,255);
+                  strokeWeight(2);
+                }
+                  line(x,y,x+=vect[arr[i][ii]].x,y+=vect[arr[i][ii]].y)
+
+              }
+            }
+          
+          
+          vect.splice(0,1);
+        }
+
+      }
+    </script>
+    <header>
+      <h1>Brian Kloosterman Jr.</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Works</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="projects">
+        <h1>Works</h1>
+        <div class="major">
+          <h3>🤖Synthet: The Fully Autonomous Robot {May 2023 - present} </h3>
+          <a href="projectAI.html" target="_blank">
+            <img src="projects/robot/me.jpg" alt="Using its interface">
+          </a>
+          <p>This is among the projects to make use of LLMs to provide inelligence and autonomy to a robot.</p>
+          <a href="projectAI.html">View Project</a> </div>
+        <div class="mid">
+            <h3>💬znen Translator: A Simple Work In Progress {May 2023 - present} </h3>
+          <p>Just a simple AI translation app using LLMs to do the translation. It's a work in progress.</p>
+          <a href="projectAI.html">View Project</a> </div>
+        <div class="mid">
+          <h3>📚🦠🎲Bugs & Birds: A Simple Evoltion Simulator {2023}</h3>
+          <p>Developped for a middle school biology course I tought. The kids loved it. <br>"Don't let the bird die!"</p>
+          <a href="project2.html">View Project</a> </div>
+        <div class="project">
+            <h3>📊Generational power blocks in US leadership {2023}</h3>
+            <p>Age groups form power blocks in US leadership and we're due for a shift to a yonger generation in 2028 or soon there after.</p>
+            <a href="project3.html">View Project</a> </div>
+        <div class="project">
+            <h3>📈Paths are hypercubes {2023}</h3>
+            <p>This was just a simple experiment answer a student's question in a AP Physics class. He asked what would happen if we arranged all the vectors in a path in all the possible ways. Well you get a line, then a square, then a cube, and then hypercubes of n dimentions to infinity. Fun!</p>
+        </div>
+        <div class="mid">
+          <h3>🎨Backgrounds: simple generative art {2023}</h3>
+          <p>I impliemented an art style guided by students for the background of some yearbook pages.</p>
+        </div>
+        <div class="major">
+        <h3>🔬🔢Elementory Inquiry Based Science and Math{2020-2022}</h3>
+        <p>I spent two years developing and teaching amazing young student in an inovative elementary school. I we learned how to count in ancient number system and diffent bases, and we even created our own number systems. We learned about buildins and different cultures, pullotion and biomagntifcation, and evolution and imagined alien habitats. It was a really great opportunity to do thing I never though possible with young students.</p>
+        <a href="project3.html">View Project</a> </div>
+        <div class="mid">
+        <h3>🦠👨‍🔬Cellular Autmota Experiments {2016-2021}</h3>
+        <p>I did a lot of experiements with variations on Conway's Game Of life.</p>
+        <a href="project3.html">View Project</a> </div>
+        <div class="major">
+        <h3>🦆Pixels and Duck {2020-2021}</h3>
+        <p>This is a visual programming app for elementary students. Students are able to direct the duck, chnage color, and use loops and conditionals.</p>
+        <a href="project3.html">View Project</a> </div>
+        <div class="major">
+            <h3>🔢Interactive Calculator {2020}</h3>
+            <p>This major project created an interative culculator for students to learn how fomulas are chains of opperations and see how the numbers flow through that. It was a real coding chalange to make math interactive.</p>
+            <a href="project3.html">View Project</a> </div>
+            
+        <div class="mid">
+            <h3>🔢My Pretty Numbers {2020}</h3>
+            <p>This is a new number system inspired by an ancient system used my some monks.</p>
+            <a href="project3.html">View Project</a> </div>
+        <div class="mid">
+            <h3>💬ESL Video Player {2020}</h3>
+            <p>This is a video player that used the subtiles from a video to randomly test your listing skills in that language. I created English and Chiense versions, but I haven't maintained the project.</p>
+            <a href="project3.html">View Project</a> </div>
+        <div class="major">
+            <h3>🦠Neurons: Evoltionary Spiking Neural Network {2018-2019}</h3>
+            <p>This was my first attempt at AI. And of course I didn't want to just learn TensorFlow. No, I wanted to make a spiking neural network from scratch. Thounsands of lines of code later, I had self assembling clusters of spiking neurons evolving using sexual reproduction.<br> It was object oriented using multitheading in Java and performance was good, yet it was held back by the cluster structure. I don't see a use in continuing unless I were to create visual tool for people to learn about creating and training neural networks. Unless I recieve funding for such a program, it's not going to happen.<br>One last interesting thing. At one point they found a flaw in my culling algorithm and started evolving to consum all 24GB of my computer's memory with their massive population. Evoltion always finds a way. </p>
+        <div class="major">
+            <h3>🎭VR Stageacting Simulator{2017}</h3>
+            <p>This is a VR simulation where you could take on the role of any character in any play and act in that role. I collaborated with my a friend on this idea and created a scripting language so he could direct any play he liked. The project was mostly a proof of concept and needs more polish.</p>
+            <a href="project3.html">View Project</a> </div>
+        <div class="mid">
+            <h3>👓ArtRooms: A VR muesam for students{2016}</h3>
+            <p>This a VR museam for a friend's AP Art History class. The project was his idea. Students were able to hang a piece of art in a virual museam, record an audio description on it, and let others explore that space. </p>
+            <a href="project3.html">View Project</a> </div>
+        <div class="major">
+            <h3>🔬📚Science Circulm Developemt {2015-2019}</h3>
+            <p>For four years I was lucky enough to work with wonderful team developing Science circulm and assessments. We were able to create project based verticlely and hozontially ingregated assessments that guided students through a process of self discovery and exploration. By the end of the program students were able to imagine and impliment unique and authentic science projects. I am grateful for this opporunity to serve students who went on to many of the best universities in the world. And to all my former students, I hope you are well, may you find and take many wonderful opportunities.</p>
+            <a href="project3.html">View Project</a> </div>
+      </section>
+    </main>
+    <footer>
+      <p><br>
+        Copy away, fellow persons, but please play fair! I am not so different from you. If you find inspiration here, spread the love by giving a nod to the a creator.<br>Let's build a world where creativity blossoms through collaboration, and good interaction abounds. Cheers to ethical inspiration and shared opporunity! Love, Brian Kloosterman Jr.
+      </p>
+    </footer>
+   
+
+    <script src="script.js"></script>
+  </body>
+</html>
