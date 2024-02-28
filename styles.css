@@ -78,9 +78,9 @@ section#projects {
     }
 
     a {
-      color: var(--color-secondary);
+      color: var(--color-primary);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
     }
   }
   .major {
@@ -97,9 +97,9 @@ section#projects {
     }
 
     a {
-      color: var(--color-secondary);
+      color: var(--color-primary);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
     }
   }
   .mid {
@@ -116,9 +116,9 @@ section#projects {
     }
 
     a {
-      color: var(--color-secondary);
+      color: var(--color-primary);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
     }
   }
   
