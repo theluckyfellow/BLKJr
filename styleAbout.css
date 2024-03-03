@@ -138,4 +138,14 @@ nav {
       margin-left: 0;
       margin-top: 20px;
   }
+
+  .project-content {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .project-content img {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
 }
