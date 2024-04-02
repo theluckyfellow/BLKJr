@@ -27,10 +27,6 @@ header {
   padding: 1rem;
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: 600;
-}
 
 nav {
   ul {
@@ -49,11 +45,6 @@ nav {
     color: var(--color-primary);
     font-weight: 600;
   }
-}
-
-main {
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 section#projects {
@@ -136,4 +127,28 @@ footer {
   margin-bottom: 10px;
   min-width: 100px;
   max-width: 310px;
+}
+img, video, iframe{
+  max-width: 100%;
+  text-align: center;
+}
+
+p, li{
+  margin: 10px 0;
+}
+.container{
+  max-width: 1165px;
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (max-width: 550px) {
+  .header_wrapper{
+    display: block;
+    text-align: center;
+  }
+}
+
+.header_wrapper {
+  text-align: center;
 }

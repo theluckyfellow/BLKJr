@@ -7,28 +7,62 @@
 body {
   font-family: sans-serif;
   background-color: #eee;
+  font-size: 17px;
+  line-height: 1.3;
 }
 
-main {
-  max-width: 720px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
+img{
+  max-width: 100%;
 }
 
-header {
+p, li{
+  margin: 10px 0;
+}
+
+.about_me_texts{
+  margin-right: 25px;
+  text-align: justify;
+}
+
+.about_me_texts p:nth-child(1)::first-letter {
+  font-size: 30px;
+}
+
+.educationnawards{
+  border-bottom: 1px dotted #222;
+}
+
+.container{
+  max-width: 1165px;
+  width: 100%;
+  margin: auto;
+}
+.header_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  background-color: #fff;
+}
+.about_main{
+  background-color: #fff;
+  border-top: 1px solid #222;
+  padding: 20px;
 }
 
 h1 {
-  font-size: 2rem;
-  font-weight: 600;
   text-align: center;
-  margin-bottom: 20px;
+}
+h1.title{
+  margin: 10px 0;
+}
+h1.title::before, h1.title::after {
+  content: '~';
+  margin: 5px;
+}
+
+.sm_detail * {
+  margin: 10px 0;
 }
 
 .images {
@@ -60,15 +94,7 @@ video {
 }
 
 .links {
-  width: 200px;
-  margin-left: 20px;
-  text-align: left;
-}
-
-.links h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+  margin-top: 25px;
 }
 
 ul {
@@ -109,13 +135,6 @@ nav {
   align-items: center;
 }
 
-.project-content img {
-  margin-right: 20px;
-}
-
-.text {
-  white-space: pre-line;
-}
 
 /* Add this media query */
 @media screen and (max-width: 720px) {
@@ -147,5 +166,26 @@ nav {
   .project-content img {
       margin-right: 0;
       margin-bottom: 20px;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  .header_wrapper{
+    display: block;
+    text-align: center;
+  }
+}
+
+.project_up {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .project_up{
+    display: block;
   }
 }
