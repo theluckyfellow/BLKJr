@@ -152,3 +152,17 @@ p, li{
 .header_wrapper {
   text-align: center;
 }
+
+section#about-me {
+  margin-bottom: 2rem; /* Add some space below the about-me section */
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.6; /* Adjust line height for better readability */
+  }
+}
