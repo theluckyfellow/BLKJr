@@ -142,10 +142,10 @@ OnTESOL | 2014
 
 ## FEATURED PROJECTS
 
-### Fully Autonomous Robot with LLM Intelligence
-**2023 - Present** | TensorFlow.js, Node.js, Arduino, YOLOv8, Custom Stereo Vision
+### Autonomous Robot with Full-Stack Control Platform (ThirdPerson AI)
+**2023 - Present** | Node.js, PostgreSQL, Python, TensorFlow.js, Arduino, Railway
 
-Autonomous robot integrating various Large Language Models for decision-making with real-time object recognition and custom stereo vision for depth mapping. Robot navigates environments, identifies objects, and completes multi-step tasks through natural language commands. Custom algorithms for sensor fusion and spatial awareness.
+Production-deployed robot control platform integrating multi-modal AI capabilities through comprehensive web application. Built full-stack system with Express backend, PostgreSQL database, JWT authentication, and RESTful API serving real-time robot control interface. Platform features streaming LLM chat (Llama 3.1 via Together.ai), computer vision (YOLOv8), bidirectional speech processing, LIDAR spatial mapping with Python integration, and persistent memory system. Deployed on Railway with multi-user support, demonstrating rapid full-stack development through iterative prototyping approach.
 
 ### Interactive Educational Applications Suite
 **2020-2023** | P5.js, Java, JavaScript
