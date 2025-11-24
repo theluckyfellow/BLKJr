@@ -95,6 +95,36 @@
         }
         @media print {
             body { margin: 0.5in; }
+
+            /* Prevent page breaks inside these elements */
+            .section-content, .project, .two-column {
+                page-break-inside: avoid;
+            }
+
+            /* Keep headings with their content */
+            h2 {
+                page-break-after: avoid;
+                page-break-inside: avoid;
+            }
+
+            h3, h4 {
+                page-break-after: avoid;
+            }
+
+            /* Keep job headers with their content */
+            .job-header {
+                page-break-after: avoid;
+            }
+
+            /* Prevent orphaned list items */
+            li {
+                page-break-inside: avoid;
+            }
+
+            /* Allow page breaks between major sections if needed */
+            h2 {
+                page-break-before: auto;
+            }
         }
     </style>
 </head>
