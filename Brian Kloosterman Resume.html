@@ -125,6 +125,11 @@
             h2 {
                 page-break-before: auto;
             }
+
+            /* Force Featured Projects to start on new page */
+            #featured-projects {
+                page-break-before: always;
+            }
         }
     </style>
 </head>
@@ -321,7 +326,7 @@
     <p><strong>Artwork Displayed in Michigan House of Representatives</strong> | 2008</p>
 </div>
 
-<h2>Featured Projects</h2>
+<h2 id="featured-projects">Featured Projects</h2>
 
 <div class="project">
     <p class="project-title">Autonomous Robot with Full-Stack Control Platform (ThirdPerson AI)</p>
