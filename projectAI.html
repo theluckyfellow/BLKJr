@@ -25,28 +25,43 @@
       <main id="main">
          <div class="container">
             <div class="about_main">
-               <h2>Autonomous Robot</h2>
+               <h2>Autonomous Robot with Full-Stack Control Platform</h2>
                <p><strong>In early 2023, after playing with LLMs, I realized that if I could translate reality into a text adventure, I could create a fully autonomous droid like the ones from the sci-fi books and films I grew up with.</strong></p>
-               <p>This is a fully autonomous LLM-driven bot. It has enhanced features like:</p>
+
+               <h3>ThirdPerson AI Platform (2024)</h3>
+               <p>The latest iteration features a production-ready web control system deployed on Railway with PostgreSQL backend. This comprehensive platform integrates multiple AI modalities into a unified control interface:</p>
+
+               <h4>Core Capabilities</h4>
                <ul>
-                  <li>👁️‍🗨️Object recognitions with Tensorflow.js (YoloV8s)</li>
-                  <li>👀Stereo vision for depth perception</li>
-                  <li>🚶‍♂️Ability to move and explore on its own</li>
-                  <li>🔌Using a serial connection to an Arduino board</li>
-                  <li>🧠Longterm and working memory system</li>
-                  <li>🧠Ability to edit its system commands to keep awareness of current task</li>
-                  <li>💾Ability to record, update, and remove long-term memories in a simple database</li>
-                  <li>🗣Ability to listen and speak using Whisper + Google TTS</li>
+                  <li>🤖 <strong>Multi-Model LLM Integration:</strong> Real-time chat with Llama 3.1 (8B, 70B, 405B) via Together.ai API with streaming responses</li>
+                  <li>👁️ <strong>Computer Vision:</strong> YOLOv8 object recognition with TensorFlow.js, real-time camera analysis, stereo depth perception</li>
+                  <li>🗣️ <strong>Audio Processing:</strong> Bidirectional speech (Whisper STT + multiple TTS voices), voice-activated commands</li>
+                  <li>📡 <strong>LIDAR Spatial Mapping:</strong> Real-time environmental scanning with Python integration, live browser visualization</li>
+                  <li>🧠 <strong>Persistent Memory System:</strong> Working and long-term memory with categorization, importance scoring, and retrieval</li>
+                  <li>🎮 <strong>Robot Control Interface:</strong> Autonomous/manual modes, Arduino serial communication, wake/sleep/reset commands</li>
+                  <li>🔐 <strong>Full Authentication:</strong> JWT-based user system, secure API key management, multi-user support</li>
                </ul>
+
+               <h4>Technical Architecture</h4>
+               <ul>
+                  <li>💻 <strong>Backend:</strong> Node.js/Express with PostgreSQL, RESTful API, WebSocket streaming</li>
+                  <li>🎨 <strong>Frontend:</strong> Vanilla JavaScript, responsive design, real-time updates</li>
+                  <li>🚀 <strong>Deployment:</strong> Railway platform with continuous deployment, environment management</li>
+                  <li>🔧 <strong>Hardware Interface:</strong> Python LIDAR integration, Arduino serial control, multi-sensor fusion</li>
+               </ul>
+
+               <p><em>Note: A significant portion of this platform was "vibe coded" - rapidly prototyped through exploratory development and AI-assisted coding, demonstrating ability to quickly ship complex full-stack applications.</em></p>
+
+               <h4>Evolution & Future Enhancements</h4>
                <p>This is part of the first wave of AI bots that stitch together disparate technologies to create bots that are mostly playthings for early adopters. The first companies to get enough of these on the market and collect enough data will be able to train more multimodal models native to an embodied form and explore and manipulate reality.
                 As it stands, the additional goals and features that I see in this generation are as follows:</p>
                <ul>
-                  <li>👤Ability to learn specific people and objects</li>
-                  <li>🚧Ability to recognize obstacles and walls</li>
-                  <li>😊😢Ability to recognize emotions</li>
-                  <li>🧺Ability to pick up and carry objects</li>
-                  <li>🌐Ability to access the web and other services</li>
-                  <li>🗣Ability to use facial expressions and vocal inflection with a better TTS</li>
+                  <li>👤 Advanced person/object recognition with persistent identity tracking</li>
+                  <li>🚧 Enhanced obstacle avoidance and pathfinding algorithms</li>
+                  <li>😊😢 Emotion recognition and responsive behavior</li>
+                  <li>🧺 Manipulator arm integration for object interaction</li>
+                  <li>🌐 Web service integration and API access for information retrieval</li>
+                  <li>🗣 Expressive TTS with emotional inflection and facial animation</li>
                </ul>
                <div class="project_content">
                      <div class="project_up">
@@ -67,12 +82,13 @@
                      </div>
                </div>
                <div class="links">
-                  <h2>Links</h2>
+                  <h2>Links & Resources</h2>
                   <ul>
-                     <li>*(coming soon) Link to full new together.ai robotic version</li>
-                     <li><a href="https://vcrtapes.s3.ap-southeast-1.amazonaws.com/robotTab/index.html" target="_blank">*New non-robitic version that makes use of together.ai API and my own servers</a></li>
-                     <li><a href="https://github.com/theluckyfellow/BotTab" target="_blank">*Old robotic version which made use of OpenAI's API</a></li>
+                     <li><a href="https://accurate-laughter-production.up.railway.app/robot" target="_blank"><strong>🔴 LIVE: ThirdPerson AI Platform</strong></a> - Production deployment on Railway with full robot control interface</li>
+                     <li><a href="https://github.com/theluckyfellow/BotTab" target="_blank">GitHub: Legacy OpenAI Version</a> - Original robotic implementation using OpenAI's API</li>
+                     <li><a href="https://vcrtapes.s3.ap-southeast-1.amazonaws.com/robotTab/index.html" target="_blank">Demo: Together.ai Prototype</a> - Earlier non-robotic version demonstrating API integration</li>
                   </ul>
+                  <p><em>Repository for current ThirdPerson platform available upon request.</em></p>
                </div>
             </div>
          </div>
