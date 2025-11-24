@@ -147,6 +147,11 @@ OnTESOL | 2014
 
 Production-deployed robot control platform integrating multi-modal AI capabilities through comprehensive web application. Built full-stack system with Express backend, PostgreSQL database, JWT authentication, and RESTful API serving real-time robot control interface. Platform features streaming LLM chat (Llama 3.1 via Together.ai), computer vision (YOLOv8), bidirectional speech processing, LIDAR spatial mapping with Python integration, and persistent memory system. Deployed on Railway with multi-user support, demonstrating rapid full-stack development through iterative prototyping approach.
 
+### Community Time Banking Platform (SoDo)
+**2024** | Node.js, PostgreSQL, Express, Railway, QR Integration
+
+Production-deployed mutual aid application enabling communities to exchange services through hour-based credits rather than currency. Developed full-stack platform with Express backend, PostgreSQL database, and responsive web interface. Implemented geographic distribution system with zip-code-based admin verification, account request workflows, and privacy-focused architecture storing personal data temporarily. Features QR code integration for rapid account sharing, quick-connect favorites, granular time tracking (0.1-hour increments), and 12-hour credit limits encouraging economic circulation. Successfully deployed on Railway serving real community mutual aid networks.
+
 ### Interactive Educational Applications Suite
 **2020-2023** | P5.js, Java, JavaScript
 
